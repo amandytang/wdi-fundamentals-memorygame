@@ -27,29 +27,27 @@ var cardId;
 console.log("User flipped queen");
 console.log("User flipped king");
 
-var checkForMatch = function () {
-	if (cardsInPlay.length === 2) {
-		if (cardsInPlay[0] === cardsInPlay[1]) {
+var checkForMatch = function (cardOne, cardTwo) {
+if (cardsInPlay[0] === cardsInPlay[1]) {
 alert("You found a match!");
 } else {
 alert("Sorry, try again.");	
 }
 }
-};
 
 var flipCard = function (cardId) {
 	console.log("User flipped " + cards[cardId].rank);	
-	cardsInPlay.push(cards[cardId].rank);
-	checkForMatch();
-	console.log(cards[cardId].cardImage);
-	console.log(cards[cardId].suit);
-};
+}
 
 var createBoard = function () {
 	for (var i = 0; i < cards.length; i++) {
+
 }
-};
+
+cardsInPlay.push(cards.rank);
 
 
-flipCard(0);
-flipCard(2);
+console.log(cards.cardImage);
+console.log(cards.suit);
+
+checkForMatch(1,2);
